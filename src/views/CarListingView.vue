@@ -1,7 +1,9 @@
 <template>
-	<div class="card-display py-4">
-		<CarCard v-for="car in cars" :key="car.id" :car="car" />
-		<Footer :car="foot" />
+	<div class="listings">
+		<div class="card-display py-4">
+			<CarCard v-for="car in cars" :key="car.id" :car="car" />
+			<Footer :car="foot" />
+		</div>
 	</div>
 </template>
 <script>
@@ -22,4 +24,8 @@
 		},
 	};
 </script>
-<style></style>
+<style scoped>
+	.listings {
+		background-color: white;
+	}
+</style>

@@ -68,12 +68,13 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
-		color: #2c3e50;
+		color: white;
 	}
 	.fa-solid {
-		color: black;
+		color: #a4d236;
 	}
 	#nav {
+		color: black;
 		background-color: rgb(51, 40, 40);
 	}
 	#nav-head {

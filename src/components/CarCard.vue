@@ -1,13 +1,18 @@
 <template>
-	<div id="cards" class="card col-lg-4" style="width: 290px">
-		<img v-bind:src="car.img" alt="" />
-		<div class="card-body">
-			<h5 class="card-title">{{ car.title }}</h5>
-			<p class="card-text">{{ car.description }}</p>
-			<p><i class="fa-solid fa-bolt-lightning"></i> {{ car.topSpeed }}km/h</p>
-			<p><i class="fa-solid fa-horse-head"></i> {{ car.horsepower }}hp</p>
-			<p><i class="fa-solid fa-dollar-sign"></i> {{ car.price }}M</p>
-			<p><i class="fa-solid fa-droplet"></i> {{ car.color }}</p>
+	<div class="everything">
+		<div id="cards" class="card col-lg-4" style="width: 290px">
+			<img v-bind:src="car.img" alt="" />
+			<router-link
+				:to="{ name: 'carsolo', params: { id: car.id } }"
+				class="card-body"
+			>
+				<h5 class="card-title">{{ car.title }}</h5>
+				<p class="card-text">{{ car.description }}</p>
+				<p><i class="fa-solid fa-bolt-lightning"></i> {{ car.topSpeed }}km/h</p>
+				<p><i class="fa-solid fa-horse-head"></i> {{ car.horsepower }}hp</p>
+				<p><i class="fa-solid fa-dollar-sign"></i> {{ car.price }}M</p>
+				<p><i class="fa-solid fa-droplet"></i> {{ car.color }}</p>
+			</router-link>
 		</div>
 	</div>
 </template>
@@ -17,6 +22,12 @@
 	};
 </script>
 <style>
+	.everything {
+		color: black;
+	}
+	#cards router-link {
+		text-decoration: none;
+	}
 	.card-display {
 		display: flex;
 		flex-direction: row;
